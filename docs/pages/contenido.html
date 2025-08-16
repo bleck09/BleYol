@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virgen del Carmen</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EC5qXZ2IsEj/J5K4edfpBSR9Yh1KfbzBb82PpMWFZpgdRVH+zLsi7BzZlXDb6dfT" crossorigin="anonymous">
+    <!-- Glide core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="../css/contenido.css">
+    <!-- Íconos -->
+    <link rel="icon" type="image/png" href="Img/TataSantiagoIco.png">
+    <link rel="apple-touch-icon" href="Img/TataSantiagoIco.png">
+
+
+
+</head>
+
+<body>
+    <!-- Elemento de audio -->
+  <audio id="background-music" loop>
+    <source id="audio-source" src="" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get('codigo');
+    const audio = document.getElementById('background-music');
+    const source = document.getElementById('audio-source');
+
+    // Elegir música según el parámetro
+    if (codigo === 'morenada') {
+      source.src = '../music/MorenadaPasantesTioyTia.mp3';  // música para jóvenes
+    } else {
+      source.src = '../music/MorenadaPasantesTioyTia.mp3';  // música para mayores
+    }
+
+    // Cargar y reproducir la música
+    window.addEventListener('load', () => {
+      audio.load();
+      audio.play().catch(() => {
+        console.log("La música se activará tras una acción del usuario.");
+      });
+    });
+
+    // Controlar visibilidad
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+    });
+  </script>
+    <section class="section2">
+        <div class="container text-center mt-5">
+            <br><br>
+            <div class="section3-content">
+                <p
+                    style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px; font-size: 34px;">
+                    <b>ORACIÓN</b>
+                </p>
+                <img src="../Img/VirgenDelCarmen.webp" alt="Imagen con latido"
+                    style="width: 200px; height: auto; border-radius: 10px; box-shadow: 4px 6px 10px rgba(255, 255, 255, 0.8); margin: 45px;">
+
+                <p
+                    style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                    Oh Virgen del Carmen,
+                    Madre amorosa y protectora nuestra,
+                    te damos gracias por tu constante presencia en nuestras vidas,
+                    por guiarnos con ternura y cubrirnos con tu manto bendito.
+
+                    Hoy nos acercamos a Ti con humildad,
+                    para ofrecerte nuestro corazón lleno de Fe y Devoción.
+                    Toma nuestras alegrías y dolores, nuestros sueños y luchas,
+                    y preséntalos ante tu Hijo, nuestro Señor Jesús.
+
+                    Danos la gracia de vivir con esperanza,
+                    de ayudar a nuestros hermanos con generosidad,
+                    y de seguir tus pasos con Amor y entrega.
+
+                    Bendícenos con tu santo Escapulario,
+                    símbolo de tu Amor y promesa maternal.
+                    Que bajo tu amparo encontremos consuelo,
+                    y que cada día de nuestra vida estemos siempre en tu presencia.
+
+                    Virgen del Carmen,
+                    guíanos siempre con tu luz,
+                    y que tu Amor nos acompañe en cada etapa de nuestro camino.
+                    Amén.</p>
+
+            </div>
+            <br><br>
+        </div>
+
+    </section>
+    <hr>
+    <h2 class="display-4 text-primary">Morenada Matarifes <br> 14 de septiembre</h2>
+    <hr>
+
+    <!--
+    <section class="Pasante d-flex text-center">
+        <div class="Pasante-content">
+            <div class="custom-slider">
+                <div class="main-image">
+                    <img id="mainImage" src="../Img/MorePasantes.jpeg" alt="Imagen principal">
+                    <div id="mainText" class="main-text">
+                        <span class="titulo-slider">Pasantes 2025</span>
+                        <span class="nombres-slider">Octavio Revollo Loza<br>Florinda Valencia Moya<br>Felipe Chambi
+                            Correa <br> Martha Revollo Loza</span>
+                    </div>
+                </div>
+                <div class="thumbnails">
+                    <img class="thumb active" src="../Img/MorePasantes.jpeg" alt="Pasantes 2025"
+                        data-titulo="Pasantes 2025"
+                        data-nombres="Octavio Revollo Loza|Florinda Valencia Moya|Felipe Chambi Correa|Martha Revollo Loza">
+
+                    <img class="thumb" src="../Img/MorePasante2.jpeg" alt="Pasantes 2025" data-titulo="Pasantes 2025"
+                        data-nombres="Felipe Chambi Correa|Martha Revollo Loza">
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!--
+    <div class="cardAnahi">
+        <section class="LibroCenter_propietario">
+            <div class="book_propietario">
+              <p></p>
+              <div class="cover_propietario"> 
+                <div style="text-align: center;">
+                  <h3 style="color: black; font-size: 20px; margin: 0; font-family: 'Georgia', serif; font-style: italic;">Propietarios</h3>
+                  <br><br>
+                  <p style="color: red; margin: 10px 0 0 0; font-family: 'Georgia', serif; font-style: italic; font-size: 15px;">
+                    Felix Rivero Rodriguez<br>
+                    y<br>
+                    Maritza Andrade Garcia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="LibroCenter_pasante">
+            <div class="book_pasante">
+              <p></p>
+              <div class="cover_pasante"> 
+                <div style="text-align: center;">
+                  <h3 style="color: black; font-size: 20px; margin: 0; font-family: 'Georgia', serif; font-style: italic;">Pasantes 2025</h3>
+                  <br><br>
+                  <p style="color: red; margin: 10px 0 0 0; font-family: 'Georgia', serif; font-style: italic; font-size: 15px;">
+                    Dra. Vanessa C. Murguia Garcia<br>
+                    y sra madre<br>
+                    Elsa Garcia Toledo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+   -->
+    <section class="section99">
+        <div class="container text-center mt-5">
+            <br><br><br>
+            <section class="MorenadaPasantes">
+                <div class="mpasantes-container"> <!-- CONTENEDOR CENTRAL -->
+                    <div class="mpasantes-card-glow">
+                        <div class="mpasantes-imgBx">
+                            <img src="../Img/MorePasantes.webp" alt="Pasantes 1">
+                        </div>
+                        <div class="mpasantes-content">
+                            <p
+                                style="font-family: 'Georgia', serif; font-style: italic; color: #ff0202; text-align: center; margin: 0px -10px; font-size: 30px;">
+                                <b>Pasantes 2025</b>
+                            </p>
+                            <p
+                                style="font-family: 'Georgia', serif; font-style: italic; color: #000000; text-align: center; margin: 10px 20px; font-size: 20px;">
+                                Felipe Chambi Correa<br>
+                                Martha Revollo Loza <br>
+                                Octavio Revollo Loza<br>
+                                Florinda Valencia Moya
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                Con el corazón lleno de gratitud, agradecemos a la Virgen del Carmen por la dicha de habernos sido
+                elegidos como pasantes en esta gestión 2025. Es un honor servir con Fe y Devoción en su nombre.
+
+            </p>
+            <br><br><br>
+        </div>
+    </section>
+    <hr>
+    <h2 class="display-4 text-primary">Día de la festividad</h2>
+    <hr>
+    <div class="calendar-card mx-auto my-4">
+        <h2 class="month">JULIO</h2>
+        <h1 class="date">14</h1>
+        <p class="weekday">Lunes</p>
+    </div>
+    <hr>
+    <section class="section3 d-flex text-center">
+        <div class="section3-content" id="countdownSection">
+            <p id="countdownTitle"
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px; font-size: 24px;">
+                <b>Quedan exactamente...</b>
+            </p>
+
+            <div class="countdown-container" id="countdownBoxes">
+                <div class="countdown-box">
+                    <span id="days">0</span>
+                    <p>DÍAS</p>
+                </div>
+                <div class="countdown-box">
+                    <span id="hours">0</span>
+                    <p>HRS</p>
+                </div>
+                <div class="countdown-box">
+                    <span id="minutes">0</span>
+                    <p>MIN</p>
+                </div>
+                <div class="countdown-box">
+                    <span id="seconds">0</span>
+                    <p>SEG</p>
+                </div>
+            </div>
+
+            <p id="countdownPhrase"
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                ¡Cada segundo nos acerca a la fiesta más linda del año!
+            </p>
+        </div>
+    </section>
+
+
+    <hr>
+    <h2 class="display-4 text-primary">Actividades de la Festividad</h2>
+    <hr>
+
+    <section class="cronograma-modern">
+        <h2 class="titulo-cronograma">PROGRAMA</h2>
+
+        <div class="acordeon">
+            <div class="item">
+                <button class="acordeon-btn">
+                    Lunes 14 de Julio
+                    <span class="icono">▼</span>
+                </button>
+                <div class="contenido">
+                    <ul>
+                        <li>Recepción de Bandas y Visitantes en Tojluluni</li>
+                        <li>Misa de Bienvenida en el Santuario de la Virgen del Carmen</li>
+                        <li>Ensayo final de las Fraternidades</li>
+                        <li>Serenata en Devoción a la Virgen del Carmen a Cargo de los Pasantes de la diablada
+                            Independencia</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <button class="acordeon-btn">
+                    Martes 15 de Julio
+                    <span class="icono">▼</span>
+                </button>
+                <div class="contenido">
+                    <ul>
+                        <li>Concentración de los grupos Autóctonos en el Sector de la "Cruz Loma de Abajo"</li>
+                        <li>Entrada Autóctona (Calle Sucre y Plaza 6 de Agosto)</li>
+                        <li>Concentración de las Fraternidades en el Sector "Cruz Loma del Centro"</li>
+                        <li>Entrada Fraternalidades (Av. Fidel Iriarte, Calle Baptista, Llanza, Bolívar, Cruz Loma
+                            Abajo, Sucre,
+                            Plaza 6 de agosto)</li>
+                        <li>Santuario de la Virgen del Carmen</li>
+                        <li>Ingreso de las Autoridades</li>
+                        <li>Ingreso de la Frat. Cultural “Diablada Independencia”</li>
+                        <li>Ingreso de la Frat. “Tobas”</li>
+                        <li>Ingreso de la Frat. “Tinkus”</li>
+                        <li>Ingreso de la Frat. “Morenada 14 de septiembre Matarifes”</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <button class="acordeon-btn">
+                    Miercoles 16 de Julio
+                    <span class="icono">▼</span>
+                </button>
+                <div class="contenido">
+                    <ul>
+                        <li>Alba en Devoción a la Virgen del Carmen por las diferentes bandas en la Plaza 6 de Agosto
+                        </li>
+                        <li>10:00 am Misa Solemne y Procesión de la Virgen del Carmen con la participación de las
+                            Fraternidades
+                            con sus
+                            respectivos trajes</li>
+                        <li>Recepción social en la casa de los pasantes de la morenada "Residencial Revollo"</li>
+                        <li>Autoridades y Pueblo en General</li>
+                        <li>Concentración de las Fraternidades en el Sector “Cruz Loma de Abajo”</li>
+                        <li>Ingreso de la Fraternidad. Cultural “Diablada Independencia”</li>
+                        <li>Ingreso de la Fraternidad. “Tobas”</li>
+                        <li>Ingreso de la Fraternidad. “Tinkus”</li>
+                        <li>Ingreso de la Fraternidad. “Morenda 14 de septiembre Matarifes”</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <button class="acordeon-btn">
+                    Jueves 17 de Julio
+                    <span class="icono">▼</span>
+                </button>
+                <div class="contenido">
+                    <ul>
+                        <li>7:00 am Misa en memoria de los ex fraternos de la morenada</li>
+                        <li>Encuentro de Fútbol entre Fraternidades en el Estadio “Moisés Fernández”</li>
+                        <li>Corrida de Toros en el Estadio “Moisés Fernández”</li>
+                        <li>Participación de las Bandas en la Plaza 6 de Agosto y Entrega de Reconocimiento a Cada Banda
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <button class="acordeon-btn">
+                    Viernes 18 de Julio
+                    <span class="icono">▼</span>
+                </button>
+                <div class="contenido">
+                    <ul>
+                        <li>Visita entre los Pasantes y las Fraternidades</li>
+                        <li>“Cacharpaya” en el Estadio “Moisés Fernández”</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Puedes copiar más bloques como estos para los otros días -->
+        </div>
+    </section>
+    <!--
+    <section class="section45">
+        <div class="container text-center mt-5">
+           Imagen con sombra y lo que ya tenías 
+          
+          <img
+            src="../Img/TataSantiago1.webp"
+            loading="lazy"
+            alt="Imagen con latido"
+            style="width: 200px; height: auto; box-shadow: 4px 6px 10px rgba(255, 255, 255, 0.8); margin-top: 50px; border-radius: 20px;"
+          />
+        
+
+             <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px; font-size: 34px;">
+               <b>VIERNES 18 DE JULIO </b> 
+            </p>
+          
+          <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: left; margin: 10px 20px; line-height: 1.8">
+            Visita entre los Pasantes y las Fraternidades</b> 
+
+            “Cacharpaya” en el Estadio “Moisés Fernández”
+            </p>
+        </div>
+    </section>
+    -->
+    <hr>
+    <h2 class="display-4 text-primary">Fraternidades Folklóricas</h2>
+    <hr>
+    <section class="Pasante d-flex text-center">
+        <div class="Pasante-content">
+            <div class="custom-slider">
+                <div class="main-image">
+                    <img id="mainImage2" src="../Img/moderana100.webp" alt="Imagen principal">
+                    <div id="mainText2" class="main-text2">
+                        <span class="titulo-slider2">Morenada Matarifes</span>
+                        <span class="nombres-slider2">14 de septiembre</span>
+                    </div>
+                </div>
+                <div class="thumbnails2">
+                    <img class="thumb2 active" src="../Img/moderana100.webp" alt="Diablada"
+                        data-titulo="Morenada Matarifes" data-nombres="14 de septiembre">
+
+                    <img class="thumb2" src="../Img/Diablada.webp" alt="Morenada" data-titulo="Diablada"
+                        data-nombres="">
+                    <img class="thumb2" src="../Img/tinku.webp" alt="Tinku" data-titulo="Tinku" data-nombres="">
+                    <img class="thumb2" src="../Img/tobas.webp" alt="Tobas" data-titulo="Tobas" data-nombres="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <h2 class="display-4 text-primary">Grupos que nos acompañarán cada día</h2>
+    <hr>
+    <section class="Misa d-flex text-center">
+        <div class="Misa-content">
+            <br><br>
+            <div class="calendar-card-unik mx-auto my-4">
+                <h2 class="month-unik">JULIO</h2>
+                <h1 class="date-unik">14</h1>
+                <p class="weekday-unik">Lunes</p>
+            </div>
+            <br><br>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>FRATERNIDAD DIABLADA</b>
+            </p>
+            <section class="carusel_3d_Diablada">
+                <div class="card-3d_Diablada" id="carrusel3d_Diablada">
+                    <div><img src="../Img/fraDiablada1.webp" /></div>
+                    <div><img src="../Img/fraDiablada2.webp" /></div>
+                    <div><img src="../Img/fraDiablada3.webp" /></div>
+                    <div><img src="../Img/fraDiablada4.webp" /></div>
+                    <div><img src="../Img/fraDiablada5.webp" /></div>
+                    <div><img src="../Img/fraDiablada6.webp" /></div>
+                    <div><img src="../Img/HermanosCoca.webp" /></div>
+                    <div><img src="../Img/fratinku8.webp" /></div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    <section class="Misa d-flex text-center">
+        <div class="Misa-content">
+
+            <br><br>
+            <div class="calendar-card-unik mx-auto my-4">
+                <h2 class="month-unik">JULIO</h2>
+                <h1 class="date-unik">15</h1>
+                <p class="weekday-unik">Martes</p>
+            </div>
+
+            <br><br>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>FRATERNIDAD TINKUS</b>
+            </p>
+            <section class="carusel_3d_Tinku">
+                <div class="card-3d_tinku" id="carrusel3d_tinku">
+                    <div><img src="../Img/fratinku1.webp" /></div>
+                    <div><img src="../Img/fratinku2.webp" /></div>
+                    <div><img src="../Img/fratinku3.webp" /></div>
+                    <div><img src="../Img/fratinku4.webp" /></div>
+                    <div><img src="../Img/fratinku5.webp" /></div>
+                    <div><img src="../Img/fratinku6.webp" /></div>
+                    <div><img src="../Img/fratinku7.webp" /></div>
+                    <div><img src="../Img/fratinku8.webp" /></div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    <section class="Misa d-flex text-center">
+        <div class="Misa-content">
+            <br><br>
+            <div class="calendar-card-unik mx-auto my-4">
+                <h2 class="month-unik">JULIO</h2>
+                <h1 class="date-unik">16</h1>
+                <p class="weekday-unik">Miercoles</p>
+            </div>
+            <br><br>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>FRATERNIDAD MORENADA</b>
+            </p>
+
+            <section class="carusel_3d">
+                <div class="card-3d" id="carrusel3d">
+                    <div><img src="../Img/morenadabaile1.webp" /></div>
+                    <div><img src="../Img/framorenada2.webp" /></div>
+                    <div><img src="../Img/framorenada3.webp" /></div>
+                    <div><img src="../Img/framorenada4.webp" /></div>
+                    <div><img src="../Img/HermanosCoca.webp" /></div>
+                    <div><img src="../Img/framorenada6.webp" /></div>
+                    <div><img src="../Img/framorenada7.webp" /></div>
+                    <div><img src="../Img/framorenada8.webp" /></div>
+                    <div><img src="../Img/framorenada9.webp" /></div>
+                    <div><img src="../Img/fratinku8.webp" /></div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    <section class="Misa d-flex text-center">
+        <div class="Misa-content">
+            <br><br>
+            <div class="calendar-card-unik mx-auto my-4">
+                <h2 class="month-unik">JULIO</h2>
+                <h1 class="date-unik">18</h1>
+                <p class="weekday-unik">Viernes</p>
+            </div>
+            <br><br>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>CACHARPAYA</b>
+            </p>
+            <div class="carruselRevollo">
+                <div class="revollo-slides">
+                    <img src="../Img/Revollo1.webp" alt="Foto 1">
+                    <img src="../Img/Revollo2.webp" alt="Foto 2">
+                    <img src="../Img/Revollo3.webp" alt="Foto 3">
+                    <img src="../Img/Revollo4.webp" alt="Foto 2">
+                    <img src="../Img/Revollo5.webp" alt="Foto 3">
+                    <img src="../Img/Revollo6.webp" alt="Foto 3">
+                    <img src="../Img/Revollo7.webp" alt="Foto 3">
+                    <img src="../Img/Revollo8.webp" alt="Foto 3">
+                    <img src="../Img/Revollo9.webp" alt="Foto 3">
+                    <img src="../Img/Revollo10.webp" alt="Foto 3">
+                    <img src="../Img/Revollo11.webp" alt="Foto 3">
+                    <img src="../Img/Revollo12.webp" alt="Foto 3">
+                    <img src="../Img/Revollo13.webp" alt="Foto 3">
+                    <img src="../Img/Revollo14.webp" alt="Foto 3">
+                    <!-- Agrega más imágenes si necesitas -->
+                </div>
+                <button class="revollo-prev" onclick="revolloSlide(-1)">❮</button>
+                <button class="revollo-next" onclick="revolloSlide(1)">❯</button>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <h2 class="display-4 text-primary">Independencia - Ayopaya</h2>
+    <hr>
+    <section class="section4 d-flex text-center">
+        <div class="section4-content">
+            <br>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b> Independencia, donde el viento canta entre las montañas y cada calle guarda un susurro del
+                    pasado.</b>
+            </p>
+            <div class="carruselAnahi">
+                <div class="anahi-slides">
+                    <img src="../Img/Independencia.webp" alt="Foto 1">
+                    
+                    
+                    <img src="../Img/IndependenciaHORI.webp" alt="Foto 1">
+                    <img src="../Img/IndependenciaHORI1.webp" alt="Foto 2">
+                    <img src="../Img/IndependenciaTio1.webp" alt="Foto 3">
+                     <img src="../Img/IndependenciaTio2.webp" alt="Foto 2">
+                    <img src="../Img/IndependenciaHORI2.webp" alt="Foto 3">
+                    <!-- Agrega más imágenes si necesitas -->
+                </div>
+                <button class="anahi-prev" onclick="anahiSlide(-1)">❮</button>
+                <button class="anahi-next" onclick="anahiSlide(1)">❯</button>
+            </div>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <br> Les damos la bienvenida a nuestro querido pueblo de Independencia, donde la Virgen del Carmen es
+                celebrada con Amor, Fe y Devoción.
+            </p>
+
+            <div class="misa-carrusel">
+                <div class="misa-slides">
+                    <img src="../Img/IndependenciaTio3.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia17.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia18.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia1.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia2.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia3.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia6.webp" alt="FOTO Independencia">
+                    
+                    <img src="../Img/Independencia8.webp" alt="FOTO Independencia">
+                    
+                    <img src="../Img/Independencia13.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia14.webp" alt="FOTO Independencia">
+                    <img src="../Img/Independencia16.webp" alt="FOTO Independencia">
+
+                    <img src="../Img/Independencia19.webp" alt="FOTO Independencia">
+                </div>
+                <button class="misa-prev" onclick="misaSlide(-1)">❮</button>
+                <button class="misa-next" onclick="misaSlide(1)">❯</button>
+
+            </div>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <br> Cada rincón de esta tierra vibra con alegría, Fe y Devoción. Nos alegra compartir con ustedes este
+                lugar tan especial.
+            </p>
+            <p
+                style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>UBICACIÓN</b>
+            </p>
+            <a href="https://maps.app.goo.gl/TR6mgVSUzV4HXTPGA" target="_blank">
+                <img src="../Img/ubicacion.png" alt="Lugar del evento" class="img-fluid ubicacion-img">
+            </a>
+            <br>
+            <button onclick="window.open('https://maps.app.goo.gl/TR6mgVSUzV4HXTPGA', '_blank');"
+                class="btn btn-primary mt-3">
+                Abrir Ubicación
+                <div class="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </button>
+            <br>
+        </div>
+    </section>
+    <!--
+    <hr>
+    <h2 class="display-4 text-primary">Confirma tu asistencia</h2>
+    <hr>
+    <section class="section4 d-flex text-center">
+        <div class="section4-content">
+            <br><br><br><br>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <strong>¡Esperamos contar contigo!</strong> 
+            </p>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                Te pedimos que rellenes el formulario y lo envíes. ¡Así nos ayudas mucho!
+            </p>
+            <a href="https://maps.app.goo.gl/ZKmrpK1D7zo7XAKw9" target="_blank">
+                <img src="../Img/Confirmar.png" alt="Lugar del evento" class="img-fluid ubicacion-img">
+              </a>
+            <br>
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeoxkrcKrv-CzjmnEgFFabH60vRRRXZfyvSz74HaJw8el05Yw/viewform?usp=header', '_blank');"
+                class="btn btn-primary mt-3">
+                Confirmar Asistencia
+                <div class="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </button>
+            <br>
+            
+        </div>
+    </section>
+    <hr>
+        <div class="container text-center mt-5">
+            <h2 class="display-4 text-primary">Detalles Importantes</h2>
+        </div>
+        <hr>
+    <section class="section78">
+        <div class="container text-center mt-5"> 
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                ¡Esperamos contar contigo! <br>
+                Sabemos cómo eres, así que no llegues tarde, ¿vale? <br>
+                Por favor, no olvides confirmar tu asistencia lo antes posible, ¡contamos contigo!
+            </p>
+        </div>
+    </section>
+    -->
+
+
+    <hr>
+    <h2 class="display-4 text-primary">Agradecimiento</h2>
+    <hr>
+    <p
+        style="font-family: 'Georgia', serif; font-style: italic; color: #000000; text-align: center; margin: 10px 20px;">
+        Con profundo cariño, agradecemos su presencia en este momento tan especial para nosotros.
+    </p>
+
+    <p
+        style="font-family: 'Georgia', serif; font-style: italic; color: #000000; text-align: center; margin: 10px 20px;">
+        Damos gracias a Dios y a nuestra Virgencita del Carmen por la vida, la salud y el trabajo. Agradecemos de
+        corazón a nuestros padres, padrinos, amigos, hermanos y familiares por su constante apoyo. También extendemos
+        nuestro sincero agradecimiento a todos los fraternos y devotos que, con Fe y Devoción, hacen posible que esta
+        fiesta se viva con Amor y Devoción.
+    </p>
+    <hr>
+    <!--
+    <section class="section">
+        <h2 class="display-4 text-primary">  </h2>
+        <div class="gallery3d">
+            <div class="box">
+                <span class="gallery_corazon">
+                </span>
+
+                <span style="--i:1;"><img src="../Img/TataSantiagoVane.jpeg" alt="Imagen 1"></span>
+                <span style="--i:2;"><img src="../Img/TataSantiago3.jpg" alt="Imagen 2"></span>
+                <span style="--i:3;"><img src="../Img/TataSantiago4.jpg" alt="Imagen 3"></span>
+                <span style="--i:4;"><img src="../Img/TataSantiago5.jpg" alt="Imagen 4"></span>
+                <span style="--i:5;"><img src="../Img/TataSantiago6.jpg" alt="Imagen 5"></span>
+                <span style="--i:6;"><img src="../Img/TataSantiago7.jpg" alt="Imagen 6"></span>
+                <span style="--i:7;"><img src="../Img/TataSantiago1.webp" alt="Imagen 6"></span>
+                <span style="--i:8;"><img src="../Img/TataSantiago9.jpg" alt="Imagen 6"></span>
+            </div>
+        </div>
+        <h2 class="display-4 text-primary">Oruro, 26 de Julio de 2025</h2>
+    </section>
+-->
+
+
+    <script src="../js/cuentaRegresiva.js"></script>
+
+    <script src="../js/carrusel.js"></script>
+
+</body>
+
+</html>
